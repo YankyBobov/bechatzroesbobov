@@ -1,56 +1,104 @@
-<!DOCTYPE html>
-<html lang="yi" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>בחצרות באבוב</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f7fb;
+direction:rtl;
+}
 
-<header>
-    <img src="images/logo.png" alt="בחצרות באבוב">
-    <h1>בחצרות באבוב</h1>
-    <p>ישועות, שמחות, מעמדים, דינערס און אנדערע געלעגנהייטן</p>
-</header>
+.hero{
+background:#0f2747;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
 
-<nav>
-    <a href="#">היים</a>
-    <a href="#">גאַלעריע</a>
-    <a href="#">אנדערע געלעגנהייטן</a>
-    <a href="#">אראפלאָדונגען</a>
-    <a href="#">קאָנטאַקט</a>
-</nav>
+.logo{
+width:180px;
+display:block;
+margin:auto;
+}
 
-<section class="search">
-    <input type="text" placeholder="זוך א געלעגנהייט...">
-</section>
+.hero h1{
+font-size:56px;
+margin:15px 0;
+color:#d8b85a;
+}
 
-<section class="cards">
+.hero p{
+font-size:20px;
+}
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400x220" alt="">
-        <h3>באריכט טיטל</h3>
-        <p>י״ב סיון תשפ״ו</p>
-    </div>
+nav{
+background:#d8b85a;
+text-align:center;
+padding:15px;
+}
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400x220" alt="">
-        <h3>באריכט טיטל</h3>
-        <p>י״ג סיון תשפ״ו</p>
-    </div>
+nav a{
+color:#0f2747;
+text-decoration:none;
+font-weight:bold;
+margin:0 15px;
+font-size:18px;
+}
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400x220" alt="">
-        <h3>באריכט טיטל</h3>
-        <p>י״ד סיון תשפ״ו</p>
-    </div>
+.search-section{
+text-align:center;
+padding:30px;
+}
 
-</section>
+.search-section input{
+width:80%;
+max-width:600px;
+padding:15px;
+font-size:18px;
+border-radius:10px;
+border:1px solid #ccc;
+}
 
-<footer>
-    © בחצרות באבוב
-</footer>
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding:30px;
+}
 
-</body>
-</html>
+.card{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card h3{
+padding:15px;
+margin:0;
+color:#0f2747;
+}
+
+.card p{
+padding:0 15px 15px;
+}
+
+.card button{
+margin:15px;
+padding:10px 20px;
+background:#0f2747;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#0f2747;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
