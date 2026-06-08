@@ -1,10 +1,9 @@
 @font-face{
-font-family:'FbCaligraph';
-src:url('fonts/FbCaligraph-Bold.ttf') format('truetype');
-font-weight:bold;
+font-family:'FbFlashBack';
+src:url('fonts/FbFlashBack.ttf') format('truetype');
+font-weight:normal;
 font-style:normal;
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;500;700;900&display=swap');
 
 *{
@@ -217,10 +216,10 @@ pointer-events:none;
 position:relative;
 z-index:2;
 
-font-family:'FbCaligraph', serif;
+font-family:'FbFlashBack', serif;
 
 font-size:56px;
-font-weight:bold;
+font-weight:normal;
 
 color:#D3B14C;
 
