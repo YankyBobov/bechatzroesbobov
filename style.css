@@ -64,17 +64,14 @@ height:auto;
 
 .site-title h1{
 font-family:'FbFlashBack', serif;
-font-size:70px;
-font-weight:900;
+
+font-size:72px;
+font-weight:normal;
 
 color:#D3B14C;
 
 text-shadow:
-2px 0 #D3B14C,
--2px 0 #D3B14C,
-0 2px #D3B14C,
-0 -2px #D3B14C,
-0 4px 8px rgba(0,0,0,.25);
+0 2px 4px rgba(0,0,0,.2);
 }
 
 .site-title p{
