@@ -1,7 +1,7 @@
 @font-face{
-font-family:'FbFlashBack';
-src:url('fonts/FbFlashBack.ttf') format('truetype');
-font-weight:normal;
+font-family:'FbCaligraph';
+src:url('fonts/FbCaligraph-Bold.ttf') format('truetype');
+font-weight:bold;
 font-style:normal;
 }
 
@@ -63,15 +63,11 @@ height:auto;
 }
 
 .site-title h1{
-font-family:'FbFlashBack', serif;
-
+font-family:'FbCaligraph', serif;
 font-size:72px;
 font-weight:normal;
-
 color:#D3B14C;
-
-text-shadow:
-0 2px 4px rgba(0,0,0,.2);
+text-shadow:0 2px 4px rgba(0,0,0,.15);
 }
 
 .site-title p{
@@ -95,40 +91,38 @@ transition:.3s;
 
 nav a:hover
 
-/* SEARCH BOX */
+/* SEARCH */
 
 .search-box{
-    position:relative;
-    width:260px;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .search-box input{
-    width:100%;
-    height:50px;
+width:260px;
+height:50px;
 
-    padding-right:55px;
-    padding-left:20px;
+padding:0 20px;
 
-    border:none;
-    border-radius:35px;
+border:none;
+border-radius:35px;
 
-    background:#F8F3DF;
-    color:#24361A;
+background:#F8F3DF;
+color:#24361A;
 
-    font-size:18px;
-    outline:none;
+font-family:'Noto Serif Hebrew',serif;
+font-size:18px;
+
+outline:none;
+
+box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
-.search-icon{
-    position:absolute;
-    right:20px;
-    top:50%;
-    transform:translateY(-50%);
-
-    color:#D3B14C;
-    font-size:18px;
-    z-index:10;
+.search-box input::placeholder{
+color:#666;
 }
+
 /* TICKER */
 
 .ticker{
@@ -142,48 +136,107 @@ font-weight:700;
 /* HERO */
 
 .hero{
-    height:475px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+position:relative;
 
-    background:
-    linear-gradient(
-        90deg,
-        rgba(22,45,12,.88),
-        rgba(40,70,20,.72),
-        rgba(22,45,12,.88)
-    ),
-    url("hero-bg.jpg");
+height:560px;
 
-    background-size:cover;
-    background-position:center;
+background:
+linear-gradient(
+90deg,
+rgba(25,45,18,.85),
+rgba(46,72,32,.55),
+rgba(25,45,18,.85)
+),
+linear-gradient(
+180deg,
+rgba(0,0,0,.15),
+rgba(0,0,0,.45)
+),
+url("hero-bg.jpg");
+
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#D3B14C,
+transparent
+);
 }
 
 .hero-overlay{
-    padding:20px;
+position:relative;
+padding:20px;
+}
+
+.hero-overlay::before{
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:900px;
+height:250px;
+
+background:
+radial-gradient(
+ellipse,
+rgba(211,177,76,.18),
+rgba(211,177,76,0)
+);
+
+pointer-events:none;
 }
 
 .hero-overlay h2{
-    font-size:95px;
-    font-weight:900;
-    color:#D3B14C;
+position:relative;
+z-index:2;
 
-    text-shadow:
-    0 4px 0 #8A7428,
-    0 8px 20px rgba(0,0,0,.65);
+font-size:88px;
+font-weight:900;
 
-    margin-bottom:25px;
+color:#D3B14C;
+
+text-shadow:
+0 4px 0 #8A7428,
+0 8px 20px rgba(0,0,0,.7),
+0 0 30px rgba(211,177,76,.25);
 }
 
 .hero-overlay p{
-    font-size:38px;
-    color:white;
+position:relative;
+z-index:2;
 
-    text-shadow:
-    0 2px 8px rgba(0,0,0,.55);
+margin-top:20px;
+font-size:42px;
+
+text-shadow:
+0 2px 10px rgba(0,0,0,.8);
 }
+
 /* SECTION TITLE */
 
 .section-title{
@@ -310,40 +363,26 @@ text-shadow:0 3px 10px rgba(0,0,0,.8);
 display:grid;
 grid-template-columns:1fr 1fr;
 
-margin-top:60px;
+margin-top:80px;
 
-min-height:280px;
-
-background:#2B451D;
+border-top:4px solid #D3B14C;
 }
 
 .footer-left{
 background:#355325;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-
-padding:35px 50px;
+padding:50px;
 }
 
 .footer-left h2{
-font-family:'Dida',serif;
-font-size:42px;
-line-height:1.3;
-
+font-size:48px;
 color:#D3B14C;
-
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
 .footer-left p{
-font-size:20px;
+font-size:22px;
 line-height:1.8;
-
-margin-bottom:20px;
-
-color:white;
+margin-bottom:25px;
 }
 
 .subscribe-form{
@@ -354,7 +393,7 @@ gap:15px;
 .subscribe-form input{
 flex:1;
 
-height:54px;
+height:55px;
 
 border:none;
 border-radius:35px;
@@ -362,97 +401,118 @@ border-radius:35px;
 padding:0 25px;
 
 font-size:20px;
-
 font-family:'Noto Serif Hebrew',serif;
-
-background:#F5F5F5;
 }
 
 .subscribe-form button{
-height:54px;
+background:#D3B14C;
+color:#24361A;
+
+border:none;
 
 padding:0 35px;
 
-border:none;
 border-radius:35px;
 
-background:#D3B14C;
-
-color:#24361A;
-
-font-size:18px;
+font-size:20px;
 font-weight:900;
 
 cursor:pointer;
 }
 
 .footer-right{
-background:#2B451D;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-padding:35px 50px;
-
+background:#2E4820;
+padding:50px;
 text-align:center;
 }
 
 .footer-right img{
-width:110px;
+width:90px;
 margin-bottom:15px;
 }
 
 .footer-right h3{
-font-family:'Dida',serif;
-
-font-size:56px;
-
+font-size:42px;
 color:#D3B14C;
-
 margin-bottom:10px;
 }
 
 .footer-right p{
-font-size:22px;
-margin-bottom:20px;
+font-size:20px;
 }
 
 .footer-links{
+margin-top:25px;
+
 display:flex;
-gap:25px;
-flex-wrap:wrap;
 justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .footer-links a{
 color:white;
 text-decoration:none;
 font-size:20px;
-transition:.3s;
 }
 
-.footer-links a:hover{
-color:#D3B14C;
+.footer-links a:hover
+
+/* COPYRIGHT */
+
+footer{
+background:#D3B14C;
+color:#24361A;
+
+text-align:center;
+
+padding:25px;
+
+font-size:18px;
+font-weight:bold;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
+
+.topbar{
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.search-box input{
+width:100%;
+max-width:300px;
+}
+
+.news-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+height:450px;
+}
+
+.hero-overlay h2{
+font-size:42px;
+}
+
+.hero-overlay p{
+font-size:24px;
+}
 
 .footer-contact{
 grid-template-columns:1fr;
 }
 
-.footer-left,
-.footer-right{
-padding:30px 25px;
-}
-
 .subscribe-form{
 flex-direction:column;
-}
-
-.footer-right h3{
-font-size:42px;
 }
 }
