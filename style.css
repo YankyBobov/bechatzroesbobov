@@ -6,11 +6,11 @@ body{
     color:#222;
 }
 
-.hero{
+..hero{
+    background:linear-gradient(135deg,#84b6df,#6ea5d3);
     text-align:center;
-    padding:40px 20px;
-    background:white;
-    border-bottom:4px solid #d6b654;
+    padding:50px 20px;
+    border-bottom:6px solid #d6b654;
 }
 
 .logo{
