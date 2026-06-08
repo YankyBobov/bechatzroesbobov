@@ -1,12 +1,56 @@
+<!DOCTYPE html>
+<html lang="yi" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחצרות באבוב</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body{margin:0;background:#1F3016;color:white;font-family:Arial,sans-serif}
-header{padding:25px;text-align:center;background:#16240f}
-.logoTitle{max-width:900px;width:95%;margin:auto;display:block}
-.sub{color:#679CBD;font-size:24px}
-nav{padding:15px;text-align:center;background:#24381a}
-nav a{color:#D3B14C;text-decoration:none;margin:0 15px;font-weight:bold}
-.container{max-width:1200px;margin:auto;padding:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:#24381a;border-radius:12px;overflow:hidden}
-.card img{width:100%;height:240px;object-fit:cover}
-.card div{padding:15px}
+<header>
+    <img src="images/logo.png" alt="בחצרות באבוב">
+    <h1>בחצרות באבוב</h1>
+    <p>ישועות, שמחות, מעמדים, דינערס און אנדערע געלעגנהייטן</p>
+</header>
+
+<nav>
+    <a href="#">היים</a>
+    <a href="#">גאַלעריע</a>
+    <a href="#">אנדערע געלעגנהייטן</a>
+    <a href="#">אראפלאָדונגען</a>
+    <a href="#">קאָנטאַקט</a>
+</nav>
+
+<section class="search">
+    <input type="text" placeholder="זוך א געלעגנהייט...">
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/400x220" alt="">
+        <h3>באריכט טיטל</h3>
+        <p>י״ב סיון תשפ״ו</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/400x220" alt="">
+        <h3>באריכט טיטל</h3>
+        <p>י״ג סיון תשפ״ו</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/400x220" alt="">
+        <h3>באריכט טיטל</h3>
+        <p>י״ד סיון תשפ״ו</p>
+    </div>
+
+</section>
+
+<footer>
+    © בחצרות באבוב
+</footer>
+
+</body>
+</html>
