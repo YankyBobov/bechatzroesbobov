@@ -173,16 +173,12 @@ line-height:50px;
     }
 }
 /* HERO */
-
 .hero{
-    height:560px;
-
     display:flex;
     justify-content:center;
-  align-items:flex-start;
-padding-top:50px;
+    align-items:center;
+    text-align:center;
 }
-
 background:
 linear-gradient(
 90deg,
@@ -227,36 +223,39 @@ transparent
 }
 
 .hero-overlay{
-position:relative;
-padding:20px;
-}
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
+    text-align:center;
+
+    width:100%;
+}
 .hero-overlay::before{
     content:none;
 }
 
-.hero-overlay h2{
-    font-family:'FbFlashBack' !important;
+.hero-overlay{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
-    font-size:90px;
-    font-weight:normal;
+    text-align:center;
 
-    color:#D3B14C;
-
-    text-shadow:none;
-    letter-spacing:1px;
-
-    margin-bottom:5px;
+    width:100%;
 }
 .hero-overlay p{
-position:relative;
-z-index:2;
+    font-size:42px;
 
-margin-top:5px;
-font-size:30px;
+    color:white;
 
-text-shadow:
-0 2px 8px rgba(0,0,0,.8);
+    text-align:center;
+
+    margin:0 auto;
+
+    width:100%;
 }
 
 /* SECTION TITLE */
