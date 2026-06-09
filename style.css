@@ -138,39 +138,42 @@ color:#D3B14C;
     background:#D3B14C;
     color:#24361A;
 
-    height:50px;
+    height:60px;
 
     overflow:hidden;
 
-    position:relative;
-
     display:flex;
     align-items:center;
+
+    position:relative;
 
     font-size:20px;
     font-weight:700;
 }
 
 .ticker-track{
+    display:flex;
+
+    width:max-content;
+
+    animation:ticker-scroll 80s linear infinite;
+}
+
+.ticker-track span{
     white-space:nowrap;
 
-    display:inline-block;
-
-    padding-right:100%;
-
-    animation:ticker-scroll 35s linear infinite;
+    padding-left:120px;
 }
 
 @keyframes ticker-scroll{
     0%{
-        transform:translateX(100%);
+        transform:translateX(0);
     }
 
     100%{
-        transform:translateX(-100%);
+        transform:translateX(-33.333%);
     }
 }
-
 /* HERO */
 
 .hero{
