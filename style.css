@@ -135,11 +135,40 @@ color:#D3B14C;
 /* TICKER */
 
 .ticker{
-background:#D3B14C;
-color:#24361A;
-padding:12px;
-font-size:20px;
-font-weight:700;
+    background:#D3B14C;
+    color:#24361A;
+
+    height:50px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    font-size:20px;
+    font-weight:700;
+}
+
+.ticker-track{
+    white-space:nowrap;
+
+    display:inline-block;
+
+    padding-right:100%;
+
+    animation:ticker-scroll 35s linear infinite;
+}
+
+@keyframes ticker-scroll{
+    0%{
+        transform:translateX(100%);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
 }
 
 /* HERO */
