@@ -156,46 +156,7 @@ color:#D3B14C;
 
     width:max-content;
 
-.ticker{
-    background:#D3B14C;
-    color:#24361A;
-
-    height:60px;
-
-    overflow:hidden;
-
-    display:flex;
-    align-items:center;
-
-    position:relative;
-
-    font-size:20px;
-    font-weight:700;
-}
-
-.ticker-track{
-    display:flex;
-
-    width:max-content;
-
     animation:ticker-scroll 80s linear infinite;
-}
-
-.ticker-track span{
-    white-space:nowrap;
-
-    padding-left:120px;
-}
-
-@keyframes ticker-scroll{
-    0%{
-        transform:translateX(0);
-    }
-
-    100%{
-        transform:translateX(-33.333%);
-    }
-}
 }
 
 .ticker-track span{
