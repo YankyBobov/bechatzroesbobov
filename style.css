@@ -156,7 +156,7 @@ color:#D3B14C;
 
     width:max-content;
 
-    animation:ticker-scroll 80s linear infinite;
+    animation:ticker-scroll 55s linear infinite;
 }
 
 .ticker-track span{
