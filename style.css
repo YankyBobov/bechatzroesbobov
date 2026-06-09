@@ -232,17 +232,11 @@ padding:20px;
 }
 
 .hero-overlay h2{
-    font-family:'FbFlashBack', serif;
-
-    font-size:64px; /* bigger */
-
-    font-weight:normal;
-
+    font-family:'Assistant', sans-serif;
+    font-size:110px;
+    font-weight:850;
     color:#D3B14C;
-
     text-shadow:none;
-
-    letter-spacing:1px;
 }
 
 .hero-overlay p{
