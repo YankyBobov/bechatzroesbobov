@@ -190,23 +190,21 @@ padding:20px;
 }
 
 .hero-overlay::before{
-content:none;
+    content:none;
 }
 
 .hero-overlay h2{
-position:relative;
-z-index:2;
+    font-family:'FbFlashBack', serif;
 
-font-family:'FbFlashBack', serif;
+    font-size:64px; /* bigger */
 
-font-size:56px;
-font-weight:normal;
+    font-weight:normal;
 
-color:#D3B14C;
+    color:#D3B14C;
 
-text-shadow:
-0 3px 0 #8A7428,
-0 6px 15px rgba(0,0,0,.6);
+    text-shadow:none;
+
+    letter-spacing:1px;
 }
 
 .hero-overlay p{
