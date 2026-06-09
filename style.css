@@ -156,7 +156,7 @@ line-height:50px;
     display:flex;
     width:max-content;
     white-space:nowrap;
-    animation:ticker-scroll 50s linear infinite;
+   animation:ticker-scroll 65s linear infinite;
 }
 .ticker-track span{
     white-space:nowrap;
