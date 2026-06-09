@@ -1,153 +1,566 @@
-<!DOCTYPE html>
-<html lang="yi" dir="rtl">
+@font-face{
+font-family:'FbFlashBack';
+src:url('fonts/FbFlashBack.ttf') format('truetype');
+font-weight:normal;
+font-style:normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;500;700;900&display=swap');
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<title>בחצרות באבוב</title>
+body{
+font-family:'Noto Serif Hebrew',serif;
+background:#2E4820;
+color:white;
+overflow-x:hidden;
+}
 
-<link rel="icon" type="image/png" href="favicon.png">
+/* HEADER */
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.topbar{
+background:#679CBD;
+border-bottom:4px solid #D3B14C;
+padding:10px 30px;
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;500;700;900&display=swap" rel="stylesheet">
+display:flex;
+align-items:center;
+justify-content:space-between;
 
-<link rel="stylesheet" href="style.css">
+position:sticky;
+top:0;
+z-index:999;
+}
 
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<body>
+.logo-area{
+display:flex;
+align-items:center;
+gap:20px;
+}
 
-<header class="topbar">
+.logo-box{
+width:120px;
+height:120px;
+background:#24361A;
+border-radius:50%;
 
-    <div class="logo-area">
+display:flex;
+justify-content:center;
+align-items:center;
 
-        <div class="logo-box">
-            <img src="logo.png" alt="בחצרות באבוב" class="logo">
-        </div>
+overflow:hidden;
 
-       <div class="hero-overlay">
+box-shadow:0 0 20px rgba(0,0,0,.35);
+}
 
-    <h2>בחצרות באבוב</h2>
+.logo{
+width:95px;
+height:auto;
+}
 
-    <p>מהנעשה והנשמע בחצרות קדשינו </p>
+.site-title h1{
+font-family:'FbCaligraph', serif;
+font-size:72px;
+font-weight:normal;
+color:#D3B14C;
+text-shadow:0 2px 4px rgba(0,0,0,.15);
+}
 
-</div>
-    </div>
+.site-title p{
+font-size:18px;
+margin-top:8px;
+color:white;
+}
 
-<div class="search-box">
-    <input type="text" placeholder="זוכט...">
-    <i class="fas fa-search search-icon"></i>
-</div>
-    <nav>
-        <a href="#">הויפט בלאט</a>
-        <a href="#">גאלעריע</a>
-        <a href="#">ווידיא</a>
-        <a href="#">באריכטן</a>
-        <a href="#">רעדאקציע</a>
-    </nav>
+nav{
+display:flex;
+gap:50px;
+}
 
-</header>
+nav a{
+color:white;
+text-decoration:none;
+font-size:24px;
+font-weight:700;
+transition:.3s;
+}
 
-<section class="ticker">
-    <div class="ticker-track">
-        <span>ברוכים הבאים מהנעשה והנשמע בחצרות הקודש באבוב בנשיאות כ"ק מרן רבינו שליט"א • בילדער • שמחות • באזוכן • ימים טובים •</span>
+nav a:hover{
+color:#D3B14C;
+}
 
-        <span>ברוכים הבאים מהנעשה והנשמע בחצרות הקודש באבוב בנשיאות כ"ק מרן רבינו שליט"א • בילדער • שמחות • באזוכן • ימים טובים •</span>
+/* SEARCH */
 
-        <span>ברוכים הבאים מהנעשה והנשמע בחצרות הקודש באבוב בנשיאות כ"ק מרן רבינו שליט"א • בילדער • שמחות • באזוכן • ימים טובים •</span>
-        
-        <span>ברוכים הבאים מהנעשה והנשמע בחצרות הקודש באבוב בנשיאות כ"ק מרן רבינו שליט"א • בילדער • שמחות • באזוכן • ימים טובים •</span>
-    </div>
-</section>
+.search-box{
+    position:relative;
+    width:260px;
+}
 
-<section class="hero">
+.search-box input{
+    width:100%;
+    height:50px;
 
-<div class="hero-overlay">
+    padding-right:55px; /* room for icon on right */
+    padding-left:20px;
 
-<h2>מהנעשה והנשמע בחצרות קדשינו</h2>
+    border:none;
+    border-radius:35px;
 
-<p>בצל כ"ק מרן אדמו"ר שליט"א</p>
+    background:#F8F3DF;
+    color:#24361A;
 
-</div>
+    font-family:'Noto Serif Hebrew',serif;
+    font-size:18px;
 
-</section>
+    outline:none;
+}
 
-<section class="section-title">
-<h2>לעצטע בילדער</h2>
-</section>
+.search-icon{
+    position:absolute;
 
-<section class="news-grid">
+    right:20px;  /* puts icon on right */
 
-<div class="main-story">
+    top:50%;
+    transform:translateY(-50%);
 
-<img src="wedding.jpg" alt="חתונה בצל רבינו">
+    color:#CEB045;
 
-<div class="story-text">
-<h2>חתונה בצל רבינו</h2>
-</div>
+    font-size:18px;
 
-</div>
+    pointer-events:none;
+}
+/* TICKER */
 
-<div class="side-story">
+.ticker{
+    background:#D3B14C;
+    color:#24361A;
 
-    <img src="smachos.jpg" alt="שמחות" class="side-image">
+  height:50px;
+line-height:50px;
 
-    <h3>שמחות</h3>
+    overflow:hidden;
 
-</div>
+    display:flex;
+    align-items:center;
 
-<div class="side-story">
-<h3>ימים טובים</h3>
-</div>
+    position:relative;
 
-<div class="side-story">
-<h3>ראש חודש</h3>
-</div>
+    font-size:20px;
+    font-weight:700;
+}
 
-<div class="side-story">
-<h3>באזיכן</h3>
-</div>
+.ticker-track{
+    display:flex;
+    width:max-content;
+    white-space:nowrap;
+   animation:ticker-scroll 65s linear infinite;
+}
+.ticker-track span{
+    white-space:nowrap;
+    padding-left:120px;
+}
 
-</section>
+@keyframes ticker-scroll{
+    0%{
+        transform:translateX(0);
+    }
 
-<section class="footer-contact">
+    100%{
+        transform:translateX(-33.333%);
+    }
+}
+/* HERO */
 
-```
-<section class="footer-contact">
+.hero{
+position:relative;
 
-    <div class="footer-left">
+height:560px;
 
-        <h2>סיינט אייך אויף צו באקומען אפדעיטס אויף אימעיל</h2>
+background:
+linear-gradient(
+90deg,
+rgba(25,45,18,.85),
+rgba(46,72,32,.55),
+rgba(25,45,18,.85)
+),
+linear-gradient(
+180deg,
+rgba(0,0,0,.15),
+rgba(0,0,0,.45)
+),
+url("hero-bg.jpg");
 
-        <p>
-            באקומט די לעצטע נייעס, בילדער, שמחות און באריכטן פון בחצרות באבוב
-        </p>
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
 
-        <form class="subscribe-form">
-            <input type="email" placeholder="אייער אימעיל אדרעס...">
-            <button type="submit"> סאבסקרייבט </button>
-        </form>
+display:flex;
+justify-content:center;
+align-items:center;
 
-    </div>
+text-align:center;
+overflow:hidden;
+}
 
-    <div class="footer-right">
+.hero::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:4px;
 
-        <img src="logo.png" alt="בחצרות באבוב">
+background:
+linear-gradient(
+90deg,
+transparent,
+#D3B14C,
+transparent
+);
+}
 
-        <h3>בחצרות באבוב</h3>
+.hero-overlay{
+position:relative;
+padding:20px;
+}
 
-        <p>מהנעשה והנשמע בחצרות קדשינו</p>
+.hero-overlay::before{
+    content:"";
 
-        <div class="footer-links">
-            <a href="#">הויפט בלאט</a>
-            <a href="#">גאלעריע</a>
-            <a href="#">ווידיא</a>
-            <a href="#">באריכטן</a>
-        </div>
+    position:absolute;
 
-    </div>
+    top:50%;
+    left:50%;
 
-</section>
+    transform:translate(-50%,-50%);
+
+    width:950px;
+    height:220px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(211,177,76,.08),
+            rgba(211,177,76,0)
+        );
+
+    pointer-events:none;
+}
+
+.hero-overlay h2{
+    position:relative;
+    z-index:2;
+
+    font-family:'FbFlashBack', serif;
+
+    font-size:72px;
+    font-weight:normal;
+
+    color:#D3B14C;
+
+    text-shadow:
+        0 2px 0 #8A7428,
+        0 4px 12px rgba(0,0,0,.45),
+        0 0 12px rgba(211,177,76,.15);
+}
+
+.hero-overlay p{
+    position:relative;
+    z-index:2;
+
+    margin-top:22px;
+
+    font-size:34px;
+
+    letter-spacing:2px;
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45);
+}
+
+/* SECTION TITLE */
+
+.section-title{
+background:#D3B14C;
+padding:25px;
+text-align:center;
+}
+
+.section-title h2{
+color:#24361A;
+font-size:50px;
+}
+
+/* NEWS GRID */
+
+.news-grid{
+max-width:1600px;
+margin:50px auto;
+padding:0 25px;
+
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:25px;
+}
+
+.main-story{
+background:white;
+color:black;
+
+border-radius:18px;
+overflow:hidden;
+
+grid-row:span 2;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+.main-story img{
+width:100%;
+height:550px;
+object-fit:cover;
+display:block;
+}
+
+.story-text{
+padding:25px;
+text-align:center;
+}
+
+.story-text h2{
+font-size:48px;
+color:#24361A;
+}
+
+/* SIDE BOXES */
+
+.side-story{
+position:relative;
+overflow:hidden;
+
+min-height:260px;
+
+background:#2E4A20;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+}
+
+.side-story:hover{
+transform:translateY(-5px);
+}
+
+.side-image{
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+}
+
+.side-story::after{
+content:"";
+
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+
+height:120px;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,.75),
+rgba(0,0,0,0)
+);
+}
+
+.side-story h3{
+position:absolute;
+
+bottom:20px;
+right:20px;
+
+z-index:2;
+
+font-size:34px;
+font-weight:900;
+
+color:#D3B14C;
+
+text-shadow:0 3px 10px rgba(0,0,0,.8);
+}
+
+/* CUSTOM FOOTER */
+
+.footer-contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+
+margin-top:80px;
+
+border-top:4px solid #D3B14C;
+}
+
+.footer-left{
+background:#355325;
+padding:50px;
+}
+
+.footer-left h2{
+font-size:48px;
+color:#D3B14C;
+margin-bottom:20px;
+}
+
+.footer-left p{
+font-size:22px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.subscribe-form{
+display:flex;
+gap:15px;
+}
+
+.subscribe-form input{
+flex:1;
+
+height:55px;
+
+border:none;
+border-radius:35px;
+
+padding:0 25px;
+
+font-size:20px;
+font-family:'Noto Serif Hebrew',serif;
+}
+
+.subscribe-form button{
+background:#D3B14C;
+color:#24361A;
+
+border:none;
+
+padding:0 35px;
+
+border-radius:35px;
+
+font-size:20px;
+font-weight:900;
+
+cursor:pointer;
+}
+
+.footer-right{
+background:#2E4820;
+padding:50px;
+text-align:center;
+}
+
+.footer-right img{
+width:90px;
+margin-bottom:15px;
+}
+
+.footer-right h3{
+font-size:42px;
+color:#D3B14C;
+margin-bottom:10px;
+}
+
+.footer-right p{
+font-size:20px;
+}
+
+.footer-links{
+margin-top:25px;
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#D3B14C;
+}
+/* COPYRIGHT */
+
+footer{
+background:#D3B14C;
+color:#24361A;
+
+text-align:center;
+
+padding:25px;
+
+font-size:18px;
+font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.topbar{
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.search-box input{
+width:100%;
+max-width:300px;
+}
+
+.news-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+height:450px;
+}
+
+.hero-overlay h2{
+font-size:42px;
+}
+
+.hero-overlay p{
+font-size:24px;
+}
+
+.footer-contact{
+grid-template-columns:1fr;
+}
+
+.subscribe-form{
+flex-direction:column;
+}
+}
