@@ -228,32 +228,59 @@ padding:20px;
 }
 
 .hero-overlay::before{
-    content:none;
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:950px;
+    height:220px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(211,177,76,.08),
+            rgba(211,177,76,0)
+        );
+
+    pointer-events:none;
 }
 
 .hero-overlay h2{
+    position:relative;
+    z-index:2;
+
     font-family:'FbFlashBack', serif;
 
-    font-size:64px; /* bigger */
-
+    font-size:72px;
     font-weight:normal;
 
     color:#D3B14C;
 
-    text-shadow:none;
-
-    letter-spacing:1px;
+    text-shadow:
+        0 2px 0 #8A7428,
+        0 4px 12px rgba(0,0,0,.45),
+        0 0 12px rgba(211,177,76,.15);
 }
 
 .hero-overlay p{
-position:relative;
-z-index:2;
+    position:relative;
+    z-index:2;
 
-margin-top:15px;
-font-size:28px;
+    margin-top:22px;
 
-text-shadow:
-0 2px 8px rgba(0,0,0,.8);
+    font-size:34px;
+
+    letter-spacing:2px;
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45);
 }
 
 /* SECTION TITLE */
