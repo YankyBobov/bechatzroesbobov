@@ -63,7 +63,7 @@ height:auto;
 
 .site-title h1{
 font-family:'FbCaligraph', serif;
-font-size:100px;
+font-size:72px;
 font-weight:normal;
 color:#D3B14C;
 text-shadow:0 2px 4px rgba(0,0,0,.15);
@@ -228,59 +228,32 @@ padding:20px;
 }
 
 .hero-overlay::before{
-    content:"";
-
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:950px;
-    height:220px;
-
-    background:
-        radial-gradient(
-            ellipse,
-            rgba(211,177,76,.08),
-            rgba(211,177,76,0)
-        );
-
-    pointer-events:none;
+    content:none;
 }
 
 .hero-overlay h2{
-    position:relative;
-    z-index:2;
-
     font-family:'FbFlashBack', serif;
 
-    font-size:72px;
+    font-size:64px; /* bigger */
+
     font-weight:normal;
 
     color:#D3B14C;
 
-    text-shadow:
-        0 2px 0 #8A7428,
-        0 4px 12px rgba(0,0,0,.45),
-        0 0 12px rgba(211,177,76,.15);
+    text-shadow:none;
+
+    letter-spacing:1px;
 }
 
 .hero-overlay p{
-    position:relative;
-    z-index:2;
+position:relative;
+z-index:2;
 
-    margin-top:22px;
+margin-top:15px;
+font-size:28px;
 
-    font-size:55px;
-
-    letter-spacing:3px;
-
-    color:#FFFFFF;
-
-    text-shadow:
-        0 2px 6px rgba(0,0,0,.45);
+text-shadow:
+0 2px 8px rgba(0,0,0,.8);
 }
 
 /* SECTION TITLE */
