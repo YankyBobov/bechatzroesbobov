@@ -138,7 +138,8 @@ color:#D3B14C;
     background:#D3B14C;
     color:#24361A;
 
-    height:60px;
+  height:50px;
+line-height:50px;
 
     overflow:hidden;
 
@@ -153,15 +154,12 @@ color:#D3B14C;
 
 .ticker-track{
     display:flex;
-
     width:max-content;
-
-    animation:ticker-scroll 55s linear infinite;
+    white-space:nowrap;
+    animation:ticker-scroll 50s linear infinite;
 }
-
 .ticker-track span{
     white-space:nowrap;
-
     padding-left:120px;
 }
 
