@@ -1,8 +1,8 @@
 @font-face{
-    font-family:'FbFlashBack';
-    src:url('fonts/FbFlashBack.ttf') format('truetype');
-    font-weight:normal;
-    font-style:normal;
+font-family:'FbFlashBack';
+src:url('fonts/FbFlashBack.ttf') format('truetype');
+font-weight:normal;
+font-style:normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;500;700;900&display=swap');
 
@@ -173,12 +173,16 @@ line-height:50px;
     }
 }
 /* HERO */
+
 .hero{
+    height:560px;
+
     display:flex;
     justify-content:center;
-    align-items:center;
-    text-align:center;
+  align-items:flex-start;
+padding-top:50px;
 }
+
 background:
 linear-gradient(
 90deg,
@@ -223,39 +227,34 @@ transparent
 }
 
 .hero-overlay{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    width:100%;
+position:relative;
+padding:20px;
 }
+
 .hero-overlay::before{
     content:none;
 }
 
-.hero-overlay{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+.hero-overlay h2{
+    font-family:'Frank Ruhl Libre', serif;
+    font-size:110px;
+    font-weight:775;
 
-    text-align:center;
+    color:#D3B14C;
 
-    width:100%;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.25);
 }
+
 .hero-overlay p{
-    font-size:42px;
+position:relative;
+z-index:2;
 
-    color:white;
+margin-top:5px;
+font-size:30px;
 
-    text-align:center;
-
-    margin:0 auto;
-
-    width:100%;
+text-shadow:
+0 2px 8px rgba(0,0,0,.8);
 }
 
 /* SECTION TITLE */
