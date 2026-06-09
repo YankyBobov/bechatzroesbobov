@@ -175,9 +175,13 @@ line-height:50px;
 /* HERO */
 
 .hero{
-position:relative;
+    height:560px;
 
-height:560px;
+    display:flex;
+    justify-content:center;
+  align-items:flex-start;
+padding-top:50px;
+}
 
 background:
 linear-gradient(
