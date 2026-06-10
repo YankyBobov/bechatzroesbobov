@@ -227,8 +227,11 @@ transparent
 }
 
 .hero-overlay{
-position:relative;
-padding:20px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 
 .hero-overlay::before{
