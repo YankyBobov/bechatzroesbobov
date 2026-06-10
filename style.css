@@ -276,13 +276,15 @@ font-size:50px;
 /* NEWS GRID */
 
 .news-grid{
-max-width:1600px;
-margin:50px auto;
-padding:0 25px;
+    max-width:1700px;
+    margin:50px auto;
+    padding:0 25px;
 
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:25px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:auto auto auto;
+
+    gap:25px;
 }
 
 .main-story{
